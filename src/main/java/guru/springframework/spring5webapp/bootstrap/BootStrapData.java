@@ -8,15 +8,18 @@ import guru.springframework.spring5webapp.repositories.BookRepository;
 import guru.springframework.spring5webapp.repositories.PublisherRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Created by jt on 12/23/19.
  */
+@RestController
 @Component
 public class BootStrapData implements CommandLineRunner {
 
     private final AuthorRepository authorRepository;
-    private final BookRepository bookRepository;
+    public final BookRepository bookRepository;
     private final PublisherRepository publisherRepository;
 
     public BootStrapData(AuthorRepository authorRepository, BookRepository bookRepository, PublisherRepository publisherRepository) {
@@ -57,4 +60,9 @@ public class BootStrapData implements CommandLineRunner {
 
         System.out.println("Number of Books: " + bookRepository.count());
     }
+
+    /*@GetMapping("/hello")
+    public Book hello(){
+        return new Book("Polska", "321122");
+    }*/
 }
