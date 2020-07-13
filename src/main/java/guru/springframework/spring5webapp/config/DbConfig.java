@@ -1,4 +1,4 @@
-package guru.springframework.spring5webapp.config;
+/*package guru.springframework.spring5webapp.config;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,4 +59,4 @@ public class DbConfig {
             @Qualifier("entityManagerFactory") EntityManagerFactory entityManagerFactory) {
         return new JpaTransactionManager(entityManagerFactory);
     }
-}
+}*/
